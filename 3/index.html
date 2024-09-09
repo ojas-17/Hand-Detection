@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9a5c176476.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar sidebar-hidden">
+        <div id="cross-div">
+            <i id="cross" class="fa-solid fa-xmark hidden"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../1/index.html">Hand Detection</a></li>
+                <li><a href="../2/index.html">Ping Pong Game</a></li>
+                <li><a href="../3/index.html">Touch The Dot Game</a></li>
+                <li><a href="../4/index.html">Virtual Keyboard</a></li>
+            </ul>
+        </nav>
+    </div>
+    <i id="menu" class="fa-solid fa-bars"></i>
+
+    <div class="container" class="invisible">
+        <h1>Touch The Dot</h1>
+
+        <div class="content">
+            <div id="div1">
+                <button id="show-camera">SHOW CAMERA</button>
+                <!-- <button id="try-again">RESET</button> -->
+            </div>
+            <div id="div2" style="position: relative">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas class="output_canvas" id="output_canvas"></canvas>
+            </div>
+            <div id="div3">
+                <h2>Instructions</h2>
+                <ol>
+                    <li>Use your hands to control the bars at each side and prevent the ball from going outside the screen.</li>
+                    <li>Use your pointer finger to point to the position where you want the bar to be.</li>
+                    <li>Your left hand controls the left bar and your right hand controls the right bar.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
